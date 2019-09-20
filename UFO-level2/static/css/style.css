@@ -1,0 +1,60 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: lightpink;
+}
+
+footer {
+    color: white;
+}
+
+.filters {
+    color: black;
+}
+
+.panel-heading h5 {
+    color: black;
+}
+
+#main-title {
+    position: relative;
+    background-color: black;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+  }
+
+#main-title h1, h4 {
+    color: blue;
+}
+
+.table h4 {
+    color: maroon;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: salmon;
+ }
+
+ .table-striped>tbody>tr:nth-child(even)>td, 
+ .table-striped>tbody>tr:nth-child(even)>th {
+    background-color: yellow;
+  }
+
+#ufo-table {
+    color: black;
+    font-size: 0.85em;
+}
+
+#no-data h3 {
+    color: lightsalmon;
+    background-color: maroon;
+    text-align: center;
+}
+
+.filter {
+    background-color: salmon;
+}
