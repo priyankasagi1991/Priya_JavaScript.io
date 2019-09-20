@@ -3,9 +3,9 @@ var tableData = data;
 
 var tbody = d3.select("tbody");
 
-// Function build table
+// Function to build table
 function buildTable(data){
-    // First, clear out existing data
+    // clearing out existing data
     tbody.html("");
     data.forEach(dataRow => {
         console.table(dataRow);
@@ -19,25 +19,22 @@ function buildTable(data){
     });
 }
 
-// Event that calls a function  name it handleClick
+// handleClick function
 function handleClick(){
-    d3.event.preventDefault() // prevent the form from refreshing the page
+    d3.event.preventDefault() //in order to  prevent  from refreshing the page
     
     let date = d3.select("#datetime").property("value");
     let filterData = tableData;
 
-    // Check to see if a date was entered and filter the data using that date
+    
     if (date){
-        // Apply filter to the table data to only keep the 
-        // rows where the datetime value matches the filter value
+        
         filterData = filterData.filter((row) => row.datetime === date);
 
     }
 
     buildTable(filterData);
 }
-
-
 
 d3.selectAll("#filter-btn").on("click", handleClick);
 buildTable(tableData);

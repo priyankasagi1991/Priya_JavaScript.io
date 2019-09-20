@@ -13,21 +13,21 @@ function tableDisplay(ufoSightings) {
   });
 };
 
-// clear the table for new data
+// clearing the table for new data
 function deleteTbody() {
   d3.select("tbody")
     .selectAll("tr").remove()
     .selectAll("td").remove();
 };
   
-// initial display of all UFO sightings
+// display of all UFO sightings
 console.log(tableData);
 tableDisplay(tableData);
 
 // 'Filter Table' button
 var button = d3.select("#filter-btn");
 
-// filter the database
+// filtering database
 button.on("click", function(event) {
   
   d3.event.preventDefault();
@@ -36,13 +36,13 @@ button.on("click", function(event) {
   var filteredData = tableData;
   var inputId = document.getElementsByClassName("form-control");
   
-  // iterate through all the input fields
+  // looping through the input fields
   for (var i = 0; i < inputId.length; i++) {
 	
 	var idName = inputId[i].id;
 	var field = d3.select("#" + idName).property("value");
 	
-	// treat empty or space-only fields as a search for ALL for that field
+	
 	if (field.trim() !== "") {
 	  var filteredData = filteredData.filter(ufoSighting =>
 	    // match as case insensitive
